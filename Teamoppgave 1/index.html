@@ -5,11 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TacoFredag</title>
     <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            border: 2px solid red;
+            border-radius: 10px;
+            
+        }
+        .container{
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-content: space-between;
+            
+
+        }
         .table1{
+             width: 400px;
+             border:2px solid;
+             margin: 20px; 
+             height: 300px;
+             background-color: lightblue;
+             text-align: center;
 
         }
         .table2{
-
+            width: 400px;
+            height: 300px;
+            border:2px solid;
+            margin: 20px;  
+            background-color: rgb(219, 222, 56);
+            text-align: center;
+            
+        }
+        ul{
+            list-style-type:circle;
+            
         }
 
     </style>
@@ -17,17 +48,98 @@
 
 </head>
 <body>
-    <div class="table1">
-        Ingredienser
+    <h1>Taco Fredag!</h1>
+    <div class="container">
+        <div class="table1">
+            Ingredienser
+            <ul>
+                <li onclick="select(this)">Kjøttdeig</li>
+                <li onclick="select(this)">Løk</li>
+                <li onclick="select(this)">Agurk</li>
+                <li onclick="select(this)">Avokado</li>
+                <li onclick="select(this)">Mais</li>
+                <li onclick="select(this)">Salat</li>
+                <li onclick="select(this)">Oregano</li>
+                <li onclick="select(this)">Taco Saus</li>
+                <li onclick="select(this)">Ost</li>
+                <li onclick="select(this)">Paprika</li>
+                <li onclick="select(this)">Tomat</li>
+                <li onclick="select(this)">Jalapenôs</li>
+                
+            </ul>
+            
+            
+        </div>
+        <div class="table2">
+            Taco Skjell
+            <ul>
+                <li id="1"></li>
+                <li id="2"></li>
+                <li id="3"></li> 
+                <li id="4"></li>
+            </ul>
+        </div>
     </div>
-    <div class="table2">
-        Taco Skjell
-    </div>
-    <h1>hello world!</h1>
+    
+   
+
 </body>
     <script>
-        
 
+            let valg1 = "1"
+            let valg2 = "2"        
+            let valg3 = "3"
+            let valg4 = "4"
+        
+            function select(element){
+            
+            
+            if(valg1=="1"){
+            
+            valg1=element.innerText
+            document.getElementById ("1").innerText = valg1
+             valg2 =""
+             console.log(valg1);
+        
+            }
+           else if(valg2==""){
+            valg2=element.innerText
+            document.getElementById ("2").innerText = valg2
+            valg3 =""
+            console.log(valg2);
+             
+          
+            }
+           else if(valg3==""){
+            valg3=element.innerText
+            document.getElementById ("3").innerText = valg3
+            valg4 =""
+            console.log(valg3);
+             
+          
+            }
+           else if(valg4==""){
+            valg4=element.innerText
+            document.getElementById ("4").innerText = valg4
+            
+             
+          }
+           
+
+            element.innerText = "Valgt"
+            element.onclick = null
+            
+           
+            
+            
+            }
+
+        
 
     </script>
 </html>
+
+
+
+
+
